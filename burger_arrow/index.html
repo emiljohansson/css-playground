@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <title>Butger to arrow animation</title>
+
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="bower_components/less/dist/less-1.7.3.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <p>An animation from <a href="http://www.google.com/design/spec/animation/responsive-interaction.html#">Google Material Design</a></p>
+
+
+    <input id="toggleBox" type="checkbox" class="hide">
+    <div class="click-area hide"></div>
+    <div class="toggle-container">
+        <div class="bar top" id="yui_3_17_2_1_1407511141871_3682"></div>
+        <div class="bar middle" id="yui_3_17_2_1_1407511141871_1750"></div>
+        <div class="bar bottom" id="yui_3_17_2_1_1407511141871_3746"></div>
+    </div>
+
+    <div class="hide test-line"></div>
+
+    <script>
+        var toggleBox = document.getElementById('toggleBox');
+        document.querySelector('.toggle-container').addEventListener('click', function() {
+            toggleBox.checked = !toggleBox.checked;
+        });
+    </script>
+</body>
+</html>
