@@ -6,14 +6,25 @@ module.exports = function (grunt) {
 
             single_file: {
                 options: {},
-                src: 'styles.css',
-                dest: 'styles.css'
+                src: '../gh-pages/buttons/styles.css',
+                dest: '../gh-pages/buttons/styles.css'
             },
+        },
+
+        less: {
+            concat: {
+                options: {},
+                files: {
+                    "../gh-pages/buttons/styles.css": "styles.less"
+                }
+            }
         }
     });
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
     grunt.registerTask('default', [
+        'less',
         'autoprefixer'
     ]);
 };
