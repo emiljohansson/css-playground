@@ -1,9 +1,7 @@
-# Burger to arrow
+# Buttons
 
-> description...
->
-> ...
+> Some simple hover animitions.
 
 ## Demo
 
-[Check it live!](http://emiljohansson.github.io/css-playground/xxx)
+[Check it live!](http://emiljohansson.github.io/css-playground/buttons)
