@@ -9,11 +9,6 @@
     position: absolute;
 }
 
-#toggleBox:checked  ~ .click-area {
-    opacity: 1;
-    //transition: @transitionDuration @transitionEase;
-}
-
 .toggle-container {
     position: absolute;
     left: 100px;
@@ -46,32 +41,39 @@
     }
 }
 
-#toggleBox:checked  ~ .toggle-container {
-    margin-top: -7px;
-    transform: rotate(40deg) translate(0, 4px);
-    transition: @transitionDuration ease-in-out;
+.min .toggle-container {
+    margin-top: 10px;
+    opacity: 0;
+    transform: scale(0) rotate(40deg) translate(0, 4px);
+    transition: @transitionDuration @transitionEase;
 }
 
-#toggleBox:checked  ~ .toggle-container .left,
-#toggleBox:checked  ~ .toggle-container .top {
+.done .toggle-container {
+    margin-top: -7px;
+    transform: scale(1) rotate(40deg) translate(0, 4px);
+    transition: @transitionDuration @transitionEase;
+}
+
+.done .toggle-container .left,
+.done .toggle-container .top {
     transition: 0.1s @transitionEase;
     width: 0;
     opacity: 0;
 }
 
-#toggleBox:checked  ~ .toggle-container .bottom {
+.done .toggle-container .bottom {
     width: 12px;
     top: 20px;
 }
 
-#toggleBox:checked  ~ .toggle-container .right {
+.done .toggle-container .right {
     width: 30px;
     transform: rotate(90deg);
     top: 6px;
     margin-right: -14px;
 }
 
-#toggleBox:checked  ~ .toggle-container .bottom,
-#toggleBox:checked  ~ .toggle-container .right {
+.done .toggle-container .bottom,
+.done .toggle-container .right {
     background-color: green;
 }

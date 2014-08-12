@@ -10,20 +10,31 @@
     <p>An attampt to copy <a href="http://www.polymer-project.org/docs/elements/paper-elements.html#paper-checkbox">Polymer's paper-checkbox</a></p>
 
     <input id="toggleBox" type="checkbox" class="hide">
-    <div class="toggle-container">
-        <div class="bar top"></div>
-        <div class="bar left"></div>
-        <div class="bar right"></div>
-        <div class="bar bottom"></div>
+    <div id="toggle" class="">
+        <div class="toggle-container">
+            <div class="bar top"></div>
+            <div class="bar left"></div>
+            <div class="bar right"></div>
+            <div class="bar bottom"></div>
+        </div>
     </div>
 
     <div class="hide test-line"></div>
 
     <script>
         var toggleBox = document.getElementById('toggleBox');
+        var toggle = document.getElementById('toggle');
+        var delayTimer = null;
         document.querySelector('.toggle-container').addEventListener('click', function() {
             toggleBox.checked = !toggleBox.checked;
+            toggle.className = "min";
+            clearInterval(delayTimer);
+            delayTimer = setInterval(updateContainer, 400);
         });
+        function updateContainer() {
+            toggle.className = toggleBox.checked === true ? "done" : "";
+            clearInterval(delayTimer);
+        }
     </script>
 </body>
 </html>
