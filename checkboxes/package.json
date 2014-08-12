@@ -1,0 +1,16 @@
+{
+  "name": "checkboxes",
+  "version": "0.0.0",
+  "description": "description...",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emil Johansson",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^1.0.0",
+    "grunt-contrib-less": "^0.11.4"
+  }
+}

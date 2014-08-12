@@ -1,0 +1,77 @@
+@import "../default";
+
+
+.test-line {
+    top: 170px;
+    width: 100%;
+    background-color: blue;
+    height: 2px;
+    position: absolute;
+}
+
+#toggleBox:checked  ~ .click-area {
+    opacity: 1;
+    //transition: @transitionDuration @transitionEase;
+}
+
+.toggle-container {
+    position: absolute;
+    left: 100px;
+    top: 150px;
+    width: 20px;
+    height: 18px;
+    transition: @transitionDuration @transitionEase;
+    padding: 1px;
+
+    .bar {
+        position: absolute;
+        width: 22px;
+        height: 2px;
+        background-color: #2D2C2C;
+        top: 0;
+        right: 0;
+        transition: @transitionDuration @transitionEase;
+    }
+
+    .left, {
+        transform: rotate(90deg) translate(10px, 10px);
+    }
+
+    .right {
+        transform: rotate(90deg) translate(10px, -10px);
+    }
+
+    .bottom {
+        top: 20px;
+    }
+}
+
+#toggleBox:checked  ~ .toggle-container {
+    margin-top: -7px;
+    transform: rotate(40deg) translate(0, 4px);
+    transition: @transitionDuration ease-in-out;
+}
+
+#toggleBox:checked  ~ .toggle-container .left,
+#toggleBox:checked  ~ .toggle-container .top {
+    transition: 0.1s @transitionEase;
+    width: 0;
+    opacity: 0;
+}
+
+#toggleBox:checked  ~ .toggle-container .bottom {
+    width: 12px;
+    top: 20px;
+}
+
+#toggleBox:checked  ~ .toggle-container .right {
+    width: 30px;
+    transform: rotate(90deg);
+    top: 6px;
+    margin-right: -14px;
+}
+
+#toggleBox:checked  ~ .toggle-container .bottom,
+#toggleBox:checked  ~ .toggle-container .right {
+    background-color: green;
+}
