@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="bower_components/less/dist/less-1.7.3.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div>
+        <h1 id="theText">Animation text</h1>
+    </div>
+
+    <hr/>
+    <div id="button-container">
+        <div id="">reset</div>
+        <div id="fade-out">fade out</div>
+    </div>
+
+    <script>
+        var buttons = Array.prototype.slice.call(document.getElementById('button-container').querySelectorAll('div'));
+        buttons.forEach(function() {
+            this.addEventListener('click', onButtonClicked);
+        });
+        function onButtonClicked(event) {
+            document.getElementById('theText').className = event.target.id;
+        }
+    </script>
+</body>
+</html>
