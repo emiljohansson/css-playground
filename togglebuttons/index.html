@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Toggle buttons</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <input id="toggleBox" type="checkbox" class="hide">
+    <div class="toggle-container">
+        <div class="switch" draggable="true"></div>
+    </div>
+
+    <script>
+        var toggleBox = document.getElementById('toggleBox');
+        document.querySelector('.toggle-container').addEventListener('click', function() {
+            toggleBox.checked = !toggleBox.checked;
+        });
+    </script>
+</body>
+</html>
