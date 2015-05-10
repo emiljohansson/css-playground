@@ -1,0 +1,22 @@
+body {
+  background: #FFFFFF;
+  font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+  font-weight: 300;
+}
+h1,
+h2,
+h3 {
+  font-weight: 300;
+}
+.hide {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+* {
+  -webkit-transition: 0.3s ease-in-out;
+          transition: 0.3s ease-in-out;
+}
+.fade-out {
+  opacity: 0;
+}

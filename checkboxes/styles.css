@@ -1,0 +1,90 @@
+body {
+  background: #FFFFFF;
+  font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+  font-weight: 300;
+}
+.hide {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+.test-line {
+  top: 170px;
+  width: 100%;
+  background-color: blue;
+  height: 2px;
+  position: absolute;
+}
+.toggle-container {
+  position: absolute;
+  left: 100px;
+  top: 150px;
+  width: 20px;
+  height: 18px;
+  -webkit-transition: 0.3s ease-in-out;
+          transition: 0.3s ease-in-out;
+  padding: 1px;
+}
+.toggle-container .bar {
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  background-color: #2D2C2C;
+  top: 0;
+  right: 0;
+  -webkit-transition: 0.3s ease-in-out;
+          transition: 0.3s ease-in-out;
+}
+.toggle-container .left {
+  -webkit-transform: rotate(90deg) translate(10px, 10px);
+      -ms-transform: rotate(90deg) translate(10px, 10px);
+          transform: rotate(90deg) translate(10px, 10px);
+}
+.toggle-container .right {
+  -webkit-transform: rotate(90deg) translate(10px, -10px);
+      -ms-transform: rotate(90deg) translate(10px, -10px);
+          transform: rotate(90deg) translate(10px, -10px);
+}
+.toggle-container .bottom {
+  top: 20px;
+}
+.min .toggle-container {
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(40deg) translate(0, 4px);
+      -ms-transform: scale(0) rotate(40deg) translate(0, 4px);
+          transform: scale(0) rotate(40deg) translate(0, 4px);
+  -webkit-transition: 0.3s ease-in-out;
+          transition: 0.3s ease-in-out;
+}
+.done .toggle-container {
+  margin-top: -7px;
+  -webkit-transform: scale(1) rotate(40deg) translate(0, 4px);
+      -ms-transform: scale(1) rotate(40deg) translate(0, 4px);
+          transform: scale(1) rotate(40deg) translate(0, 4px);
+  -webkit-transition: 0.3s ease-in-out;
+          transition: 0.3s ease-in-out;
+}
+.done .toggle-container .left,
+.done .toggle-container .top {
+  -webkit-transition: 0.1s ease-in-out;
+          transition: 0.1s ease-in-out;
+  width: 0;
+  opacity: 0;
+}
+.done .toggle-container .bottom {
+  width: 12px;
+  top: 20px;
+}
+.done .toggle-container .right {
+  width: 30px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 6px;
+  margin-right: -14px;
+}
+.done .toggle-container .bottom,
+.done .toggle-container .right {
+  background-color: green;
+}
